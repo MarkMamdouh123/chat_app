@@ -71,6 +71,7 @@ class _RegisterViewState extends State<RegisterView> {
                   height: 20,
                 ),
                 CustomTextFormFieldWidget(
+                  obscureText: true,
                   hintText: "Password",
                   onChange: (message) {
                     password = message;

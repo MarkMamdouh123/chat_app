@@ -72,6 +72,7 @@ class _LoginViewState extends State<LoginView> {
                   height: 20,
                 ),
                 CustomTextFormFieldWidget(
+                  obscureText: true,
                   hintText: "Password",
                   onChange: (message) {
                     password = message;
@@ -90,7 +91,8 @@ class _LoginViewState extends State<LoginView> {
                       try {
                         await loginUser();
                         showSnackBar(context, message: "Login Successfully");
-                        Navigator.pushNamed(context, ChatView.routeName);
+                        Navigator.pushNamed(context, ChatView.routeName,
+                            arguments: email);
                       } on FirebaseAuthException catch (e) {
                         if (e.code == 'invalid-credential') {
                           showSnackBar(context,
