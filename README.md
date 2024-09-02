@@ -1,4 +1,4 @@
-# scholar_chat
+# Chat_app
 
 A new Flutter project.
 
